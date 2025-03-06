@@ -1,0 +1,43 @@
+.hero {
+    margin-top: 76px;
+    width: 100%;
+    height: 504px;
+    background-image: url(../../images/Group51.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto auto;
+    background-size: contain;
+    background-size: 100% 100%;
+    position: relative;
+
+    &__texts {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 30%;
+        gap: 20px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 62px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 47px;
+        border-radius: 25px;
+        background-color: var(--body-color);
+        transition: 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}

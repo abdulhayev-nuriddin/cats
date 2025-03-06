@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-color);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 1200px;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--alltexts-color);
+}
+
+:root {
+    --alltexts-color: #1A212F;
+    --body-color: #FFFEFD;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--alltexts-color);
+}
+
+p,
+a,
+span {
+    color: var(--alltexts-color);
+}
+
+.dark-theme {
+    --alltexts-color: #fff;
+    --body-color: #222;
+}

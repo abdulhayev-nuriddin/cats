@@ -1,0 +1,42 @@
+.cards {
+    margin-top: 140px;
+    width: 100%;
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 70px;
+        gap: 20px 0;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 370px;
+        height: 321px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 25px 0px #D0D0D040;
+        transition: 0.3s ease;
+        padding: 30px 0 0 30px;
+
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+
+    &__img {
+        width: 91px;
+        height: 91px;
+    }
+
+}

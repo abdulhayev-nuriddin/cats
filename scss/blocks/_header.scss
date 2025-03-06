@@ -1,0 +1,35 @@
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 76px;
+    background-color: var(--body-color);
+    transition: 0.3s ease;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__links {
+        transition: all 0.3s ease;
+
+        &:focus,
+        &:hover {
+            color: #FF7236;
+        }
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
