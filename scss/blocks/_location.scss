@@ -21,3 +21,12 @@
         gap: 20px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .location {
+
+        &__map {
+            width: 399px;
+        }
+    }
+}

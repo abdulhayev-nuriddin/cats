@@ -52,3 +52,12 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .nomer {
+        &__container {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}

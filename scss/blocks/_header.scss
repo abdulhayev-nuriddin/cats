@@ -33,3 +33,11 @@
         cursor: pointer;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__container {
+            max-width: 678px;
+        }
+    }
+}

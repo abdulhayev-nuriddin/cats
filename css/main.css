@@ -20,7 +20,8 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 input,
@@ -64,6 +65,20 @@ span {
   --body-color: #222;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 678px;
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 420px;
+    padding: 0 10px;
+    width: 100%;
+  }
+}
 h1,
 h2,
 h3,
@@ -109,6 +124,11 @@ span {
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .header__container {
+    max-width: 678px;
+  }
+}
 .hero {
   margin-top: 76px;
   width: 100%;
@@ -118,7 +138,7 @@ span {
   background-position: center;
   background-size: auto auto;
   background-size: contain;
-  background-size: 100% 100%;
+  background-size: 100% 504px;
   position: relative;
 }
 .hero__texts {
@@ -148,6 +168,24 @@ span {
   transform: scale(0.9);
 }
 
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: url(../../images/tabletcat.png);
+    background-size: contain;
+    height: 868px;
+  }
+  .hero__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__texts {
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .cards {
   margin-top: 140px;
   width: 100%;
@@ -183,6 +221,11 @@ span {
   height: 91px;
 }
 
+@media only screen and (max-width: 768px) {
+  .cards__card {
+    width: 315px;
+  }
+}
 .nomer {
   margin-top: 137px;
 }
@@ -231,6 +274,12 @@ span {
   transform: scale(0.9);
 }
 
+@media screen and (max-width: 768px) {
+  .nomer__container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 .comment {
   margin-top: 143px;
 }
@@ -267,6 +316,12 @@ span {
   color: #848484;
 }
 
+@media screen and (max-width: 768px) {
+  .comment__comments {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 .location {
   margin-top: 140px;
   max-width: 100%;
@@ -288,6 +343,11 @@ span {
   gap: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .location__map {
+    width: 399px;
+  }
+}
 .footer {
   height: 125px;
 }
@@ -318,4 +378,10 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    margin-top: 5px;
+  }
 }/*# sourceMappingURL=main.css.map */

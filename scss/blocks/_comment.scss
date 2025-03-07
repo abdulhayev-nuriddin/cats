@@ -40,3 +40,10 @@
         color: #848484;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .comment__comments {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
