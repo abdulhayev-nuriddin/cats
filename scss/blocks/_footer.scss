@@ -40,3 +40,28 @@
         margin-top: 5px;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .footer {
+
+        &__container {
+            flex-direction: column;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        &__list {
+            flex-wrap: wrap;
+            width: 200px;
+            gap: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .copyright {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+}

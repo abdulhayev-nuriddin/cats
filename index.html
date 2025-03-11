@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <title>Котейка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
 </head>
 
@@ -14,6 +15,10 @@
         <div class="container header__container">
             <nav class="header__nav">
                 <img src="./images/logo.svg" alt="" class="header__logo">
+
+                <input type="checkbox" id="menu-toggle" class="header__checkbox">
+                <label for="menu-toggle" class="header__menu">&#9776;</label>
+
                 <ul class="header__list">
                     <li class="header__items">
                         <a href="#cards" class="header__links">Почему мы?</a>
@@ -114,30 +119,110 @@
             </div>
         </section>
         <section class="nomer" id="nomer">
-            <h1 class="nomer__title">
-                Номера
-            </h1>
-            <div class="container nomer__container">
-                <img src="./images/Rectangle20.png" alt="" class="nomer__img">
-                <div class="nomer__texts">
-                    <h2 class="nomer__subtitle">
-                        Эконом плюс
-                    </h2>
-                    <ul class="nomer__list">
-                        <li class="nomer__items">
-                            <p class="">Площадь - 0,90 м2</p>
-                        </li>
-                        <li class="nomer__items">
-                            <p class="">Размеры (ШхГхВ) — 90х100х180 см</p>
-                        </li>
-                        <li class="nomer__items">
-                            <p class="">Цена за сутки: 200₽</p>
-                        </li>
-                    </ul>
-                    <a href="#" class="nomer__link">
-                        Забронировать
-                        <img src="./images/pawwhite.png" alt="" class="nomer__link__img"></a>
+            <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2"></button>
                 </div>
+                <div class="carousel-inner">
+                    <!-- 1-SLAYD -->
+                    <div class="carousel-item active">
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <img src="./images/Rectangle20.png" class="rounded-3 img-fluid slider-img" alt="Cat">
+                            <div class="slider-text">
+                                <h1>Эконом плюс</h1>
+                                <ul>
+                                    <li>
+                                        <p class="">
+                                            Площадь - 0,90 м2
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="">
+                                            Размеры (ШхГхВ) — 90х100х180 см
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="">
+                                            Цена за сутки: 200₽
+                                        </p>
+                                    </li>
+                                </ul>
+                                <a href="#" class="slider-link">Забронировать
+                                    <img src="./images/pawwhite.png" alt="" class="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2-SLAYD -->
+                    <div class="carousel-item">
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <img src="./images/Rectangle21.png" class="rounded-3 img-fluid slider-img" alt="Dog">
+                            <div class="slider-text">
+                                <h1>Комфорт</h1>
+                                <ul>
+                                    <li>
+                                        <p class="">
+                                            Площадь - 1,13 м2
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="">
+                                            Размеры (ШхГхВ) - 100х125х180 см
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="">
+                                            Цена за сутки: 250₽
+                                        </p>
+                                    </li>
+                                </ul>
+                                <a class="slider-link">Забронировать
+                                    <img src="./images/pawwhite.png" alt="" class="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3-SLAYD -->
+                    <div class="carousel-item">
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <img src="./images/Rectangle22.png" class="rounded-3 img-fluid slider-img" alt="Rabbit">
+                            <div class="slider-text">
+                                <h1>Сьют</h1>
+                                <ul>
+                                    <li>
+                                        <p class="">
+                                            Площадь - 1,56 м2
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="">
+                                            Размеры (ШхГхВ) - 125х125х180 см
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="">
+                                            Цена за сутки: 350₽
+                                        </p>
+                                    </li>
+                                </ul>
+                                <a class="slider-link">Забронировать
+                                    <img src="./images/pawwhite.png" alt="" class="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Yon tugmalar -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel"
+                    data-bs-slide="prev">
+                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#customCarousel"
+                    data-bs-slide="next">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
             </div>
         </section>
         <section class="comment" id="comment">
@@ -300,6 +385,8 @@
     </footer>
 
     <script src="./js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

@@ -32,6 +32,14 @@
         height: 30px;
         cursor: pointer;
     }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__menu {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -39,5 +47,37 @@
         &__container {
             max-width: 678px;
         }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header__container {
+        max-width: 320px;
+        max-height: 62px;
+        position: relative;
+    }
+
+    .header__menu {
+        display: inline-block;
+        font-size: 35px;
+        color: var(--alltexts-color);
+    }
+
+    .header__list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 0;
+        align-items: center;
+        background-color: var(--body-color);
+        transition: all 0.3s ease;
+    }
+
+    .header__checkbox:checked~.header__list {
+        display: flex;
     }
 }

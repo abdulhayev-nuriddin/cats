@@ -30,3 +30,15 @@
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .location {
+        padding: 40px 0;
+        height: 1150px;
+
+        &__container {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}
