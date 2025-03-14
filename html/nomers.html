@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Наши номера</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/logo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <nav class="header__nav">
+                <img src="../images/logo.svg" alt="" class="header__logo">
+
+                <input type="checkbox" id="menu-toggle" class="header__checkbox">
+                <label for="menu-toggle" class="header__menu">&#9776;</label>
+
+                <ul class="header__list">
+                    <li class="header__items">
+                        <a href="#cards" class="header__links">Почему мы?</a>
+                    </li>
+                    <li class="header__items">
+                        <a href="#nomer" class="header__links">Номера</a>
+                    </li>
+                    <li class="header__items">
+                        <a href="#comment" class="header__links">Отзывы</a>
+                    </li>
+                    <li class="header__items">
+                        <a href="#location" class="header__links">Как нас найти</a>
+                    </li>
+                </ul>
+                <img src="../images/moon.png" alt="" class="header__icon" id="icon">
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="nomers">
+            <div class="container nomers__container">
+                <div class="nomers__flex">
+                    <h1 class="nomers__title">Наши номера</h1>
+                    <div class="sort">
+                        <select id="nomers__sort">
+                            <option value="area-asc">↑ По площади</option>
+                            <option value="area-desc">↓ По площади</option>
+                            <option value="price-asc">↑ По цене</option>
+                            <option value="price-desc">↓ По цене</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="nomers__flex1">
+                    <div class="nomers__filter">
+                        <label for="maxPrice">Цена за сутки: ₽</label>
+                        <span class="nomers__span">
+                            <input type="number" id="minPrice" placeholder="от 100" value="100">
+                            <input type="number" id="maxPrice" placeholder="до 600" value="600">
+                        </span>
+                        <h3 class="nomers__subtitle">Площадь</h3>
+                        <span class="nomers__span">
+                            <input type="checkbox" class="area" value="0.63">
+                            <label>0,63 м2</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" class="area" value="0.90">
+                            <label>0,90 м2</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" class="area" value="1.13">
+                            <label>1,13 м2</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" class="area" value="1.56">
+                            <label>1,56 м2</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" class="area" value="2.56">
+                            <label>2,56 м2</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" class="area" value="2.88">
+                            <label>2,88 м2</label>
+                        </span>
+                        <h3 class="nomers__subtitle">Оснащение номера</h3>
+                        <span class="nomers__span">
+                            <input type="checkbox" id="room" value="Пустой номер" class="feature-filter">
+                            <label for="room">Пустой номер</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" id="room2" value="Лежак" class="feature-filter">
+                            <label for="room2">Лежак</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" id="room3" value="Когтеточка" class="feature-filter">
+                            <label for="room3">Когтеточка</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" id="room4" value="Игровой-комплекс" class="feature-filter">
+                            <label for="room4">Игровой-комплекс</label>
+                        </span>
+                        <span class="nomers__span">
+                            <input type="checkbox" id="room5" value="Домик" class="feature-filter">
+                            <label for="room5">Домик</label>
+                        </span>
+                        <button class="nomers__btn" onclick="resetFilter()">Сбросить фильтр</button>
+                    </div>
+                    <div id="product-list"></div>
+
+                </div>
+            </div>
+        </section>
+        <section class="location" id="location">
+            <div class="container location__container">
+                <div class="location__texts">
+                    <h1 class="location__title">
+                        Как нас найти
+                    </h1>
+                    <div class="location__addres">
+                        <h3 class="">
+                            Адрес
+                        </h3>
+                        <p class="">
+                            Санкт-Петербург,
+                            ул Большая Конюшенная, д 19
+                        </p>
+                    </div>
+                    <div class="location__rejim">
+                        <h3 class="">
+                            Режим работы
+                        </h3>
+                        <p class="">
+                            Ежедневно, с 9:00 до 20:00
+                        </p>
+                    </div>
+                    <div class="location__tel">
+                        <h3 class="">
+                            Телефон
+                        </h3>
+                        <a href="tel:+8 (800) 333-55-99">8 (800) 333-55-99</a>
+                    </div>
+                    <div class="location__mail">
+                        <h3 class="">
+                            E-mail
+                        </h3>
+                        <a href="mailto:info@cat-hotel.ru">info@cat-hotel.ru</a>
+                    </div>
+                    <div class="location__socials">
+                        <h3 class="">
+                            Социальные сети
+                        </h3>
+                        <ul class="location__socials__list">
+                            <li class="">
+                                <a href="https://www.facebook.com/" class="">
+                                    <img src="../images/fb.svg" alt="" class="">
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.instagram.com/" class="">
+                                    <img src="../images/insta.svg" alt="" class="">
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.vk.com/" class="">
+                                    <img src="../images/wk.svg" alt="" class="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="location__map">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5916.740274683715!2d30.322410232007453!3d59.938508486656175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1741261053353!5m2!1sru!2s"
+                        width="650" height="580" class="location__map">
+                    </iframe> -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <img src="../images/logo.svg" alt="" class="">
+            <ul class="footer__list">
+                <li class="footer__items">
+                    <a href="#cards" class="footer__links">Почему мы?</a>
+                </li>
+                <li class="footer__items">
+                    <a href="#nomer" class="footer__links">Номера</a>
+                </li>
+                <li class="footer__items">
+                    <a href="#comment" class="footer__links">Отзывы</a>
+                </li>
+                <li class="footer__items">
+                    <a href="#location" class="footer__links">Как нас найти</a>
+                </li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="container copyright">
+            <p class="copyright__text">
+                &copy; 2019 Все права защищены
+            </p>
+            <p class="copyright__text">
+                <a href="#" class="copyright__links">Политика конфиденциальности</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
