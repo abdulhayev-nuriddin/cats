@@ -54,9 +54,8 @@
         }
 
         &__list {
-            flex-wrap: wrap;
-            width: 200px;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

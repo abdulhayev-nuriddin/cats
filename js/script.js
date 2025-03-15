@@ -22,7 +22,7 @@ const products = [
     name: "Комфорт",
     price: 250,
     area: 1.13,
-    features: ["Игровой-комплекс", "Домик"],
+    features: ["Лежак", "Когтеточка", "Игровой-комплекс"],
     image: "../images/cat3.png",
     button: "Забронировать",
   },
@@ -31,7 +31,7 @@ const products = [
     name: "Сьют",
     price: 350,
     area: 1.56,
-    features: ["Лежак", "Игровой-комплекс"],
+    features: ["Лежак", "Когтеточка", "Игровой-комплекс"],
     image: "../images/cat4.png",
     button: "Забронировать",
   },
@@ -40,7 +40,7 @@ const products = [
     name: "Люкс",
     price: 500,
     area: 2.56,
-    features: ["Когтеточка", "Домик"],
+    features: ["Лежак", "Когтеточка", "Игровой-комплекс", "Домик"],
     image: "../images/cat5.png",
     button: "Забронировать",
   },
@@ -49,7 +49,7 @@ const products = [
     name: "Супер-Люкс",
     price: 600,
     area: 2.88,
-    features: ["Пустой номер", "Игровой-комплекс"],
+    features: ["Лежак", "Когтеточка", "Игровой-комплекс", "Домик"],
     image: "../images/cat6.png",
     button: "Забронировать",
   },
@@ -153,9 +153,7 @@ icon.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   let loader = document.querySelector(".loader-container");
-
   setTimeout(function () {
     loader.classList.add("hidden");
-    content.style.display = "block";
   }, 2000);
 });
