@@ -137,6 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
+// DAY & NIGHT MODE
+
 const icon = document.getElementById("icon");
 icon.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
@@ -145,4 +147,15 @@ icon.addEventListener("click", () => {
   } else {
     icon.src = "../images/moon.png";
   }
+});
+
+// LOADER SECTION
+
+document.addEventListener("DOMContentLoaded", function () {
+  let loader = document.querySelector(".loader-container");
+
+  setTimeout(function () {
+    loader.classList.add("hidden");
+    content.style.display = "block";
+  }, 2000);
 });

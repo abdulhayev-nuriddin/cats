@@ -45,7 +45,7 @@
 
     select {
         cursor: pointer;
-        background-color: transparent;
+        background-color: var(--body-color);
         color: var(--alltexts-color);
         transition: all 0.3s ease;
         outline: none;
@@ -53,7 +53,7 @@
         width: 174px;
         height: 35px;
         border-radius: 25px;
-        box-shadow: 0px 2px 12px 0px #AD988F2E;
+        box-shadow: 0px 2px 12px 0px var(--alltexts-color);
         text-align: center;
     }
 }
@@ -74,43 +74,44 @@
     color: var(--alltexts-color);
 }
 
-.product-list {
+#product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
 }
 
+input[type="checkbox"] {
+    accent-color: var(--body-color);
+    border: red 10px solid;
+}
 
 .product-card {
-    background: #fff;
+    background: var(--body-color);
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--alltexts-color);
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 20px var(--alltexts-color);
     }
 
     h2 {
         font-size: 20px;
         margin-bottom: 10px;
-        color: #333;
+        color: var(--alltexts-color);
     }
 
     p {
         font-size: 16px;
-        color: #666;
+        color: var(--alltexts-color);
         margin-bottom: 5px;
     }
 
-    .product-image {
+    img {
         width: 100%;
         max-height: 200px;
         object-fit: cover;
@@ -129,7 +130,7 @@
         background-color: #FF7236;
         border: none;
         outline: none;
-        color: var(--body-color);
+        color: #fff;
         transition: all 0.3s ease-in-out;
 
         &:hover {
