@@ -139,6 +139,23 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("booking-button")) {
+    const productId = event.target.getAttribute("data-id");
+    window.location.href = `product.html?id=${productId}`;
+  }
+});
+document.querySelectorAll(".slider-link").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    let linkId = this.getAttribute("data-id");
+    if (linkId) {
+      window.location.href = `html/product.html?id=${linkId}`;
+    } else {
+    }
+  });
+});
+
 // DAY & NIGHT MODE
 
 const icon = document.getElementById("icon");
@@ -158,23 +175,4 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     loader.classList.add("hidden");
   }, 2000);
-});
-
-//-------------------------------------------------------------
-
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("booking-button")) {
-    const productId = event.target.getAttribute("data-id");
-    window.location.href = `product.html?id=${productId}`;
-  }
-});
-document.querySelectorAll(".slider-link").forEach((link) => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-    let linkId = this.getAttribute("data-id");
-    if (linkId) {
-      window.location.href = `html/product.html?id=${linkId}`;
-    } else {
-    }
-  });
 });
