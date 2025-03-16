@@ -92,9 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
               .join("")}
           </ul>
           <p>Цена за сутки: <strong>${mainProduct.price}</strong></p>
-          <button class="booking-button" data-id="${mainProduct.id}"> ${
-      mainProduct.button
-    }</button>
+          <button id="openModal" class="booking-button" data-id="${
+            mainProduct.id
+          }"> ${mainProduct.button}</button>
         </div>
       </div>
     `;
@@ -122,5 +122,45 @@ document.querySelectorAll(".slider-link").forEach((link) => {
       window.location.href = `product.html?id=${linkId}`;
     } else {
     }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let openModal = document.getElementById("openModal");
+  let modal = document.getElementById("modal");
+  let closeModal = document.getElementById("closeModal");
+  let overlay = document.getElementById("overlay");
+  let sendRequest = document.getElementById("sendRequest");
+  let successModal = document.getElementById("successModal");
+  let closeSuccessModal = document.getElementById("closeSuccessModal");
+  let okButton = document.getElementById("okButton");
+
+  openModal.addEventListener("click", function () {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  });
+
+  closeModal.addEventListener("click", function () {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+  });
+
+  sendRequest.addEventListener("click", function () {
+    successModal.style.display = "block";
+  });
+
+  closeSuccessModal.addEventListener("click", function () {
+    successModal.style.display = "none";
+  });
+
+  okButton.addEventListener("click", function () {
+    modal.style.display = "none";
+    successModal.style.display = "none";
+    overlay.style.display = "none";
+  });
+
+  overlay.addEventListener("click", function () {
+    modal.style.display = "none";
+    overlay.style.display = "none";
   });
 });

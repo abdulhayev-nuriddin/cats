@@ -12,6 +12,25 @@
 </head>
 
 <body>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Забронировать номер</h2>
+        <input type="text" placeholder="Ваше имя">
+        <input type="text" placeholder="Имя Питомца" required>
+        <input type="tel" placeholder="Телефон">
+        <input type="email" placeholder="E-mail">
+        <button id="sendRequest">Отправить заявку</button>
+    </div>
+
+    <div class="success-modal" id="successModal">
+        <span class="close" id="closeSuccessModal">&times;</span>
+        <h2>Спасибо за заявку!</h2>
+        <p class="success-message">Мы свяжемся с вами в ближайшее время</p>
+        <button id="okButton">OK</button>
+    </div>
+
     <header class="header">
         <div class="container header__container">
             <nav class="header__nav">
@@ -40,7 +59,7 @@
     </header>
     <main>
         <section class="">
-            <div id="main-product"></div>
+            <div id="main-product" class="container"></div>
         </section>
         <h1 class="title__product">Другие номера</h1>
 
